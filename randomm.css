@@ -1,0 +1,523 @@
+/* ==========================================================================
+   1. IMPORT FONT & GLOBAL VARIABLES
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --pink-primary: #ff4d8d;
+    --pink-secondary: #ff75a0;
+    --pink-light: #fff0f5;
+    --pink-soft: #fec5bb;
+    --pink-dark: #d62ad0;
+    --gradient-bg: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #feada6 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 228, 230, 0.7));
+    --shadow-soft: 0 10px 30px rgba(255, 77, 141, 0.2);
+    --shadow-glow: 0 0 20px rgba(255, 117, 160, 0.6);
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gradient-bg);
+    color: #4a4a4a;
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   3. ANIMASI GLOBAL (KEYFRAMES)
+   ========================================================================== */
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(255, 77, 141, 0.4); transform: scale(1); }
+    50% { box-shadow: 0 0 30px rgba(255, 77, 141, 0.8); transform: scale(1.03); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.3); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.3); }
+    70% { transform: scale(1); }
+}
+
+/* ==========================================================================
+   4. HEADER & NAVBAR
+   ========================================================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pink-primary);
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '🌸';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--pink-primary);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    transform: translateX(-50%) scale(1);
+}
+
+/* ==========================================================================
+   5. BUTTONS (TOMBOL INTERAKTIF)
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--pink-primary), var(--pink-secondary));
+    color: white;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--pink-primary);
+    border: 2px solid var(--pink-secondary);
+}
+
+.btn-secondary:hover {
+    background: var(--pink-light);
+    transform: translateY(-4px);
+}
+
+.btn-music {
+    background: #ffe6ee;
+    color: var(--pink-primary);
+    font-size: 0.9rem;
+    animation: pulseGlow 3s infinite;
+}
+
+/* ==========================================================================
+   6. HERO SECTION
+   ========================================================================== */
+.hero-section {
+    padding: 160px 0 90px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.birthday-badge {
+    background: #ffffff;
+    color: var(--pink-primary);
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-soft);
+    display: inline-block;
+    margin-bottom: 15px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    color: #800f2f;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.hero-subtitle {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.4s ease;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    animation: fadeInUp 1.6s ease;
+}
+
+.hero-image-frame {
+    position: relative;
+    text-align: center;
+    animation: float 5s ease-in-out infinite;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 30px;
+    border: 8px solid white;
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03) rotate(-2deg);
+}
+
+/* ==========================================================================
+   7. SECTION HEADINGS
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: var(--pink-primary);
+}
+
+.section-title p {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   8. POETRY / PUISI SECTION
+   ========================================================================== */
+.poetry-section {
+    padding: 80px 0;
+}
+
+.poetry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.poetry-card {
+    background: var(--gradient-card);
+    padding: 35px 25px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: fadeInUp 1s ease;
+}
+
+.poetry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-glow);
+    background: white;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+    animation: heartBeat 2.5s infinite;
+}
+
+.poetry-card h3 {
+    color: var(--pink-primary);
+    margin-bottom: 15px;
+}
+
+.poem-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   9. GALLERY SECTION
+   ========================================================================== */
+.gallery-section {
+    padding: 80px 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 77, 141, 0.85), transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.15);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   10. WISHES / HARAPAN SECTION
+   ========================================================================== */
+.wishes-section {
+    padding: 80px 0;
+}
+
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.wish-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 30px 20px;
+    border-radius: 20px;
+    position: relative;
+    border-left: 5px solid var(--pink-primary);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease;
+}
+
+.wish-card:hover {
+    transform: translateX(8px);
+    background: white;
+}
+
+.wish-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--pink-soft);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.wish-card h3 {
+    color: var(--pink-primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* ==========================================================================
+   11. LETTER / SURAT RAHASIA
+   ========================================================================== */
+.letter-section {
+    padding: 90px 0;
+}
+
+.letter-wrapper {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: var(--shadow-soft);
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+    border: 2px dashed var(--pink-soft);
+    animation: float 6s ease-in-out infinite;
+}
+
+.letter-header {
+    text-align: center;
+    border-bottom: 1px solid var(--pink-light);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.letter-header h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: var(--pink-primary);
+}
+
+.letter-date {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.letter-body p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.letter-closing {
+    text-align: right;
+    margin-top: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: var(--pink-primary);
+}
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+.main-footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 -5px 20px rgba(255, 182, 193, 0.2);
+}
+
+.footer-quote {
+    font-style: italic;
+    color: var(--pink-primary);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.footer-heart {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    animation: heartBeat 1.5s infinite;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ==========================================================================
+   13. RESPONSIVE DESIGN (HP & TABLET)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list {
+        gap: 12px;
+        font-size: 0.85rem;
+    }
+
+    .hero-section .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .letter-wrapper {
+        padding: 25px;
+    }
+}
