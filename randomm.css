@@ -493,14 +493,27 @@ body {
 /* ==========================================================================
    13. RESPONSIVE DESIGN (HP & TABLET)
    ========================================================================== */
+/* GANTI SELURUH BAGIAN @media (max-width: 768px) DENGAN KODE INI */
 @media (max-width: 768px) {
-    .main-header .container {
-        flex-direction: column;
-        gap: 10px;
+    .main-header {
+        padding: 10px 0;
     }
 
+    .main-header .container {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    /* Kunci menu navigasi di HP agar tidak menggeser layar */
     .nav-list {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 5px 10px;
         gap: 12px;
+    }
+
+    .nav-link {
         font-size: 0.85rem;
     }
 
@@ -510,11 +523,12 @@ body {
     }
 
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-buttons {
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .letter-wrapper {
