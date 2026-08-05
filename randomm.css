@@ -40,10 +40,6 @@ body {
     padding: 0 20px;
 }
 
-{html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
 /* ==========================================================================
    3. ANIMASI GLOBAL (KEYFRAMES)
    ========================================================================== */
@@ -497,27 +493,14 @@ body {
 /* ==========================================================================
    13. RESPONSIVE DESIGN (HP & TABLET)
    ========================================================================== */
-/* GANTI SELURUH BAGIAN @media (max-width: 768px) DENGAN KODE INI */
 @media (max-width: 768px) {
-    .main-header {
-        padding: 10px 0;
-    }
-
     .main-header .container {
         flex-direction: column;
-        gap: 8px;
-        align-items: center;
+        gap: 10px;
     }
 
-    /* Kunci menu navigasi di HP agar tidak menggeser layar */
     .nav-list {
-        width: 100%;
-        justify-content: flex-start;
-        padding: 5px 10px;
         gap: 12px;
-    }
-
-    .nav-link {
         font-size: 0.85rem;
     }
 
@@ -527,12 +510,11 @@ body {
     }
 
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .hero-buttons {
         justify-content: center;
-        flex-wrap: wrap;
     }
 
     .letter-wrapper {
