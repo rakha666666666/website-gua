@@ -89,14 +89,12 @@ ANIMATIONS
 
 @keyframes pulseGlow {
     0%, 100% {
-        box-shadow:
-            0 0 15px rgba(255, 77, 141, 0.4);
+        box-shadow: 0 0 15px rgba(255, 77, 141, 0.4);
         transform: scale(1);
     }
 
     50% {
-        box-shadow:
-            0 0 30px rgba(255, 77, 141, 0.8);
+        box-shadow: 0 0 30px rgba(255, 77, 141, 0.8);
         transform: scale(1.03);
     }
 }
@@ -142,8 +140,7 @@ HEADER
     left: 0;
     width: 100%;
 
-    background:
-        rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.88);
 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -160,6 +157,7 @@ HEADER
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 15px;
     flex-wrap: wrap;
 }
@@ -174,15 +172,12 @@ LOGO
 }
 
 .logo a {
-    font-family:
-        'Dancing Script',
-        cursive;
+    font-family: 'Dancing Script', cursive;
 
     font-size: 2rem;
     font-weight: 700;
 
-    color:
-        var(--pink-primary);
+    color: var(--pink-primary);
 
     text-decoration: none;
     white-space: nowrap;
@@ -202,8 +197,10 @@ NAVIGATION
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-wrap: wrap;
     gap: 8px;
+
     list-style: none;
     width: 100%;
 }
@@ -216,6 +213,7 @@ NAVIGATION
     display: block;
 
     text-decoration: none;
+
     color: #666;
 
     font-weight: 600;
@@ -225,14 +223,13 @@ NAVIGATION
 
     border-radius: 50px;
 
-    background:
-        rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.75);
 
     border:
-        1px solid rgba(255, 117, 160, 0.25);
+        1px solid
+        rgba(255, 117, 160, 0.25);
 
-    transition:
-        all 0.3s ease;
+    transition: all 0.3s ease;
 
     white-space: nowrap;
 }
@@ -250,7 +247,8 @@ NAVIGATION
     transform: translateY(-2px);
 
     box-shadow:
-        0 5px 15px rgba(255, 77, 141, 0.25);
+        0 5px 15px
+        rgba(255, 77, 141, 0.25);
 }
 
 .nav-link.active {
@@ -264,7 +262,8 @@ NAVIGATION
         );
 
     box-shadow:
-        0 5px 15px rgba(255, 77, 141, 0.25);
+        0 5px 15px
+        rgba(255, 77, 141, 0.25);
 }
 
 
@@ -284,6 +283,7 @@ HEADER MUSIC
     border-radius: 50px;
 
     text-decoration: none;
+
     font-weight: 600;
 
     border: none;
@@ -301,19 +301,15 @@ HEADER MUSIC
 }
 
 .btn-music {
-    background:
-        #ffe6ee;
+    background: #ffe6ee;
 
-    color:
-        var(--pink-primary);
+    color: var(--pink-primary);
 
     font-size: 0.85rem;
 
-    padding:
-        9px 16px;
+    padding: 9px 16px;
 
-    animation:
-        pulseGlow 3s infinite;
+    animation: pulseGlow 3s infinite;
 
     white-space: nowrap;
 }
@@ -333,8 +329,7 @@ BUTTONS
 
     color: white;
 
-    box-shadow:
-        var(--shadow-soft);
+    box-shadow: var(--shadow-soft);
 }
 
 .btn-primary:hover {
@@ -342,15 +337,13 @@ BUTTONS
         translateY(-4px)
         scale(1.05);
 
-    box-shadow:
-        var(--shadow-glow);
+    box-shadow: var(--shadow-glow);
 }
 
 .btn-secondary {
     background: white;
 
-    color:
-        var(--pink-primary);
+    color: var(--pink-primary);
 
     border:
         2px solid
@@ -358,8 +351,7 @@ BUTTONS
 }
 
 .btn-secondary:hover {
-    background:
-        var(--pink-light);
+    background: var(--pink-light);
 
     transform:
         translateY(-4px);
@@ -377,6 +369,7 @@ HERO
     min-height: 80vh;
 
     display: flex;
+
     align-items: center;
 }
 
@@ -394,32 +387,23 @@ HERO
 .birthday-badge {
     background: white;
 
-    color:
-        var(--pink-primary);
+    color: var(--pink-primary);
 
-    padding:
-        6px 18px;
+    padding: 6px 18px;
 
-    border-radius:
-        20px;
+    border-radius: 20px;
 
-    font-size:
-        0.85rem;
+    font-size: 0.85rem;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    box-shadow:
-        var(--shadow-soft);
+    box-shadow: var(--shadow-soft);
 
-    display:
-        inline-block;
+    display: inline-block;
 
-    margin-bottom:
-        15px;
+    margin-bottom: 15px;
 
-    animation:
-        fadeInUp 1s ease;
+    animation: fadeInUp 1s ease;
 }
 
 .hero-title {
@@ -427,59 +411,43 @@ HERO
         'Dancing Script',
         cursive;
 
-    font-size:
-        3.2rem;
+    font-size: 3.2rem;
 
-    color:
-        #800f2f;
+    color: #800f2f;
 
-    line-height:
-        1.2;
+    line-height: 1.2;
 
-    margin-bottom:
-        20px;
+    margin-bottom: 20px;
 
-    animation:
-        fadeInUp 1.2s ease;
+    animation: fadeInUp 1.2s ease;
 }
 
 .hero-subtitle {
-    font-style:
-        italic;
+    font-style: italic;
 
-    color:
-        #555;
+    color: #555;
 
-    font-size:
-        1.1rem;
+    font-size: 1.1rem;
 
-    margin-bottom:
-        30px;
+    margin-bottom: 30px;
 
-    animation:
-        fadeInUp 1.4s ease;
+    animation: fadeInUp 1.4s ease;
 }
 
 .hero-buttons {
-    display:
-        flex;
+    display: flex;
 
-    flex-wrap:
-        wrap;
+    flex-wrap: wrap;
 
-    gap:
-        15px;
+    gap: 15px;
 
-    animation:
-        fadeInUp 1.6s ease;
+    animation: fadeInUp 1.6s ease;
 }
 
 .hero-image-frame {
-    position:
-        relative;
+    position: relative;
 
-    text-align:
-        center;
+    text-align: center;
 
     animation:
         float 5s ease-in-out infinite;
@@ -487,24 +455,20 @@ HERO
 
 
 /* =========================================================
-FOTO ATAS — TIDAK DIUBAH
+FOTO UTAMA / HERO
+TIDAK DIUBAH OLEH GALERI
 ========================================================= */
 
 .profile-img {
-    width:
-        100%;
+    width: 100%;
 
-    max-width:
-        380px;
+    max-width: 380px;
 
-    border-radius:
-        30px;
+    border-radius: 30px;
 
-    border:
-        8px solid white;
+    border: 8px solid white;
 
-    box-shadow:
-        var(--shadow-soft);
+    box-shadow: var(--shadow-soft);
 
     transition:
         transform 0.5s ease;
@@ -521,11 +485,9 @@ SECTION TITLE
 ========================================================= */
 
 .section-title {
-    text-align:
-        center;
+    text-align: center;
 
-    margin-bottom:
-        50px;
+    margin-bottom: 50px;
 }
 
 .section-title h2 {
@@ -533,19 +495,15 @@ SECTION TITLE
         'Dancing Script',
         cursive;
 
-    font-size:
-        2.8rem;
+    font-size: 2.8rem;
 
-    color:
-        var(--pink-primary);
+    color: var(--pink-primary);
 }
 
 .section-title p {
-    color:
-        #777;
+    color: #777;
 
-    font-size:
-        0.95rem;
+    font-size: 0.95rem;
 }
 
 
@@ -554,13 +512,11 @@ POETRY
 ========================================================= */
 
 .poetry-section {
-    padding:
-        80px 0;
+    padding: 80px 0;
 }
 
 .poetry-grid {
-    display:
-        grid;
+    display: grid;
 
     grid-template-columns:
         repeat(
@@ -568,19 +524,16 @@ POETRY
             minmax(280px, 1fr)
         );
 
-    gap:
-        30px;
+    gap: 30px;
 }
 
 .poetry-card {
     background:
         var(--gradient-card);
 
-    padding:
-        35px 25px;
+    padding: 35px 25px;
 
-    border-radius:
-        24px;
+    border-radius: 24px;
 
     border:
         1px solid
@@ -589,8 +542,7 @@ POETRY
     box-shadow:
         var(--shadow-soft);
 
-    text-align:
-        center;
+    text-align: center;
 
     transition:
         all 0.4s ease;
@@ -603,19 +555,15 @@ POETRY
     box-shadow:
         var(--shadow-glow);
 
-    background:
-        white;
+    background: white;
 }
 
 .card-icon {
-    font-size:
-        2.5rem;
+    font-size: 2.5rem;
 
-    margin-bottom:
-        15px;
+    margin-bottom: 15px;
 
-    display:
-        inline-block;
+    display: inline-block;
 
     animation:
         heartBeat 2.5s infinite;
@@ -641,88 +589,70 @@ POETRY
 }
 
 
-/* ==========================================================================
+/* =========================================================
 GALLERY 10 FOTO
-KHUSUS BAGIAN INI
-DESKTOP = 4 KOLOM
-TABLET = 3 KOLOM
-HP = 4 - 3 - 3
-========================================================================== */
+========================================================= */
+
+/*
+    BAGIAN INI KHUSUS 10 FOTO.
+    TIDAK MENGUBAH .profile-img.
+*/
 
 .gallery-section {
-    padding:
-        80px 0;
+    padding: 80px 0;
 }
 
-.gallery-section .gallery-grid {
-    display:
-        grid;
+.gallery-grid {
+    display: grid;
 
     grid-template-columns:
-        repeat(4, minmax(0, 1fr));
+        repeat(4, 1fr);
 
-    gap:
-        18px;
+    gap: 18px;
 
-    width:
-        100%;
+    width: 100%;
 
-    max-width:
-        950px;
+    max-width: 950px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 }
 
-.gallery-section .gallery-item {
-    position:
-        relative;
+.gallery-item {
+    position: relative;
 
-    width:
-        100%;
+    width: 100%;
 
-    aspect-ratio:
-        3 / 4;
+    aspect-ratio: 3 / 4;
 
-    border-radius:
-        16px;
+    border-radius: 16px;
 
-    overflow:
-        hidden;
+    overflow: hidden;
 
-    background:
-        #fff;
+    background: #fff;
 
     box-shadow:
         var(--shadow-soft);
 }
 
-.gallery-section .gallery-item img {
-    width:
-        100%;
+.gallery-item img {
+    width: 100%;
 
-    height:
-        100%;
+    height: 100%;
 
-    display:
-        block;
+    display: block;
 
-    object-fit:
-        cover;
+    object-fit: cover;
 
-    object-position:
-        center;
+    object-position: center;
 
     transition:
         transform 0.5s ease;
 }
 
-.gallery-section .gallery-overlay {
-    position:
-        absolute;
+.gallery-overlay {
+    position: absolute;
 
-    inset:
-        0;
+    inset: 0;
 
     background:
         linear-gradient(
@@ -731,148 +661,68 @@ HP = 4 - 3 - 3
             transparent
         );
 
-    display:
-        flex;
+    display: flex;
 
-    flex-direction:
-        column;
+    flex-direction: column;
 
-    justify-content:
-        flex-end;
+    justify-content: flex-end;
 
-    padding:
-        12px;
+    padding: 12px;
 
-    color:
-        white;
+    color: white;
 
-    opacity:
-        0;
+    opacity: 0;
 
     transition:
         opacity 0.3s ease;
 }
 
-.gallery-section .gallery-overlay h4 {
-    font-size:
-        13px;
+.gallery-overlay h4 {
+    font-size: 13px;
 
-    margin-bottom:
-        3px;
+    margin-bottom: 3px;
 }
 
-.gallery-section .gallery-overlay p {
-    font-size:
-        10px;
+.gallery-overlay p {
+    font-size: 10px;
 
-    line-height:
-        1.4;
+    line-height: 1.4;
 }
 
-.gallery-section .gallery-item:hover img {
+.gallery-item:hover img {
     transform:
         scale(1.08);
 }
 
-.gallery-section .gallery-item:hover .gallery-overlay {
-    opacity:
-        1;
-}
-
-
-/* ==========================================================================
-TABLET
-========================================================================== */
-
-@media (max-width: 768px) {
-
-    .gallery-section .gallery-grid {
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap:
-            12px;
-
-        max-width:
-            600px;
-    }
-
-    .gallery-section .gallery-item {
-        border-radius:
-            13px;
-    }
-
-}
-
-
-/* ==========================================================================
-HP — 4 FOTO / 3 FOTO / 3 FOTO
-========================================================================== */
-
-@media (max-width: 480px) {
-
-    .gallery-section {
-        padding:
-            60px 12px;
-    }
-
-    .gallery-section .container {
-        padding:
-            0;
-    }
-
-    .gallery-section .gallery-grid {
-        display:
-            grid;
-
-        grid-template-columns:
-            repeat(4, minmax(0, 1fr));
-
-        gap:
-            7px;
-
-        width:
-            100%;
-
-        max-width:
-            none;
-
-        margin:
-            0 auto;
-    }
-
-    .gallery-section .gallery-item {
-        width:
-            100%;
-
-        aspect-ratio:
-            3 / 4;
-
-        border-radius:
-            8px;
-    }
-
-    .gallery-section .gallery-item img {
-        width:
-            100%;
-
-        height:
-            100%;
-
-        object-fit:
-            cover;
-    }
-
-    .gallery-section .gallery-overlay {
-        display:
-            none;
-    }
-
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
 }
 
 
 /* =========================================================
-LETTER / DEAR YOU
+TABLET
+3 FOTO PER BARIS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 12px;
+
+        max-width: 600px;
+    }
+
+    .gallery-item {
+        border-radius: 13px;
+    }
+}
+
+
+/* =========================================================
+DEAR YOU
 ========================================================= */
 
 #letter.letter-section {
@@ -1218,7 +1068,7 @@ FOOTER
 
 
 /* =========================================================
-TABLET / LAYAR MENENGAH
+TABLET / 900px
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1269,7 +1119,6 @@ TABLET / LAYAR MENENGAH
         margin-top:
             20px;
     }
-
 }
 
 
@@ -1288,7 +1137,9 @@ HP
     }
 
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     .main-header {
         padding:
@@ -1339,7 +1190,10 @@ HP
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+       TIDAK MENGUBAH UKURAN FOTO HERO
+    ===================================================== */
 
     .hero-section {
         padding:
@@ -1376,7 +1230,9 @@ HP
     }
 
 
-    /* SECTION */
+    /* =====================================================
+       SECTION
+    ===================================================== */
 
     .section-title h2 {
         font-size:
@@ -1384,15 +1240,213 @@ HP
     }
 
 
-    /*
-    PENTING:
-    Tidak ada lagi .gallery-grid global di sini.
-    Gallery 10 foto diatur khusus oleh
-    .gallery-section .gallery-grid
-    */
+    /* =====================================================
+       GALERI 10 FOTO KHUSUS HP
+       
+       1  2  3  4
+       5  6  7
+       8  9  10
+    ===================================================== */
+
+    .gallery-section {
+        padding:
+            60px 12px;
+    }
+
+    .gallery-section .container {
+        padding-left:
+            0;
+
+        padding-right:
+            0;
+    }
+
+    .gallery-grid {
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap:
+            8px;
+
+        width:
+            100%;
+
+        max-width:
+            none;
+    }
+
+    .gallery-item {
+        width:
+            100%;
+
+        aspect-ratio:
+            3 / 4;
+
+        border-radius:
+            10px;
+    }
+
+    .gallery-item img {
+        width:
+            100%;
+
+        height:
+            100%;
+
+        object-fit:
+            cover;
+    }
+
+    .gallery-overlay {
+        display:
+            none;
+    }
 
 
-    /* DEAR YOU */
+    /* =====================================================
+       DEAR YOU
+    ===================================================== */
 
     #letter.letter-section {
-        paddin
+        padding:
+            90px 0;
+    }
+
+    #letter .section-heading {
+        margin-bottom:
+            50px;
+    }
+
+    #letter .section-heading h2 {
+        font-size:
+            42px;
+    }
+
+    #letter .script {
+        font-size:
+            32px;
+    }
+
+    #letter .letter-layout {
+        grid-template-columns:
+            45px 1fr;
+    }
+
+    #letter .letter {
+        padding-left:
+            20px;
+    }
+
+    #letter .letter p {
+        font-size:
+            15px;
+
+        line-height:
+            1.9;
+    }
+
+    #letter .vertical-text {
+        font-size:
+            6px;
+
+        letter-spacing:
+            2px;
+    }
+
+
+    /* =====================================================
+       SURAT
+    ===================================================== */
+
+    .letter-wrapper {
+        padding:
+            25px 20px;
+
+        border-radius:
+            22px;
+    }
+
+    .letter-header h2 {
+        font-size:
+            2rem;
+    }
+
+    .letter-body p {
+        font-size:
+            0.95rem;
+    }
+
+    .letter-closing {
+        font-size:
+            1.2rem;
+    }
+}
+
+
+/* =========================================================
+HP KECIL
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .nav-link {
+        font-size:
+            0.68rem;
+
+        padding:
+            6px 8px;
+    }
+
+    .hero-section {
+        padding-top:
+            225px;
+    }
+
+    .hero-title {
+        font-size:
+            2.1rem;
+    }
+
+
+    /* =====================================================
+       DEAR YOU
+    ===================================================== */
+
+    #letter .letter-layout {
+        grid-template-columns:
+            35px 1fr;
+    }
+
+    #letter .letter {
+        padding-left:
+            15px;
+    }
+
+
+    /* =====================================================
+       GALERI TETAP 4 KOLOM
+       
+       1  2  3  4
+       5  6  7
+       8  9  10
+    ===================================================== */
+
+    .gallery-grid {
+        grid-template-columns:
+            repeat(4, 1fr);
+
+        gap:
+            6px;
+    }
+
+    .gallery-item {
+        aspect-ratio:
+            3 / 4;
+
+        border-radius:
+            8px;
+    }
+}
