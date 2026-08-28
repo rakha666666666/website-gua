@@ -1,36 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&display=swap');
 
 /* =========================================================
-GLOBAL
+GLOBAL VARIABLES
 ========================================================= */
 
 :root {
-    --pink-primary: #ff4d8d;
-    --pink-secondary: #ff75a0;
-    --pink-light: #fff0f5;
-    --pink-soft: #fec5bb;
-    --pink-dark: #d62ad0;
 
-    --gradient-bg:
-        linear-gradient(
-            135deg,
-            #ff9a9e 0%,
-            #fecfef 50%,
-            #feada6 100%
-        );
+--pink-primary: #ff4d8d;
+--pink-secondary: #ff75a0;
+--pink-light: #fff0f5;
+--pink-soft: #fec5bb;
+--pink-dark: #d62ad0;
 
-    --gradient-card:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.9),
-            rgba(255, 228, 230, 0.7)
-        );
+--gradient-bg:
+    linear-gradient(
+        135deg,
+        #ff9a9e 0%,
+        #fecfef 50%,
+        #feada6 100%
+    );
 
-    --shadow-soft:
-        0 10px 30px rgba(255, 77, 141, 0.2);
+--gradient-card:
+    linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 228, 230, 0.7)
+    );
 
-    --shadow-glow:
-        0 0 20px rgba(255, 117, 160, 0.6);
+--shadow-soft:
+    0 10px 30px rgba(255, 77, 141, 0.2);
+
+--shadow-glow:
+    0 0 20px rgba(255, 117, 160, 0.6);
+
 }
 
 /* =========================================================
@@ -38,37 +40,51 @@ RESET
 ========================================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
 
 html {
-    width: 100%;
-    overflow-x: hidden;
+width: 100%;
+overflow-x: hidden;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--gradient-bg);
-    color: #4a4a4a;
-    line-height: 1.7;
-    min-height: 100vh;
-    overflow-x: hidden;
-    width: 100%;
+
+font-family: 'Poppins', sans-serif;
+
+background: var(--gradient-bg);
+
+color: #4a4a4a;
+
+line-height: 1.7;
+
+min-height: 100vh;
+
+overflow-x: hidden;
+
+width: 100%;
+
 }
 
 img {
-    max-width: 100%;
+max-width: 100%;
 }
 
 .container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+
+width: 100%;
+
+max-width: 1100px;
+
+margin: 0 auto;
+
+padding-left: 20px;
+
+padding-right: 20px;
+
 }
 
 /* =========================================================
@@ -76,55 +92,67 @@ ANIMATIONS
 ========================================================= */
 
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(-12px);
-    }
+0%, 100% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-12px);
+}
+
 }
 
 @keyframes pulseGlow {
-    0%, 100% {
-        box-shadow: 0 0 15px rgba(255, 77, 141, 0.4);
-        transform: scale(1);
-    }
 
-    50% {
-        box-shadow: 0 0 30px rgba(255, 77, 141, 0.8);
-        transform: scale(1.03);
-    }
+0%, 100% {
+    box-shadow:
+        0 0 15px rgba(255, 77, 141, 0.4);
+
+    transform: scale(1);
+}
+
+50% {
+    box-shadow:
+        0 0 30px rgba(255, 77, 141, 0.8);
+
+    transform: scale(1.03);
+}
+
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 }
 
 @keyframes heartBeat {
-    0%, 70%, 100% {
-        transform: scale(1);
-    }
 
-    14% {
-        transform: scale(1.3);
-    }
+0%, 70%, 100% {
+    transform: scale(1);
+}
 
-    28% {
-        transform: scale(1);
-    }
+14% {
+    transform: scale(1.3);
+}
 
-    42% {
-        transform: scale(1.3);
-    }
+28% {
+    transform: scale(1);
+}
+
+42% {
+    transform: scale(1.3);
+}
+
 }
 
 /* =========================================================
@@ -132,24 +160,42 @@ HEADER
 ========================================================= */
 
 .main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
-    padding: 12px 0;
+
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+
+background:
+    rgba(255, 255, 255, 0.88);
+
+backdrop-filter: blur(12px);
+
+-webkit-backdrop-filter: blur(12px);
+
+z-index: 1000;
+
+box-shadow:
+    0 4px 20px rgba(255, 182, 193, 0.3);
+
+padding: 12px 0;
+
 }
 
 .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+gap: 15px;
+
+flex-wrap: wrap;
+
 }
 
 /* =========================================================
@@ -157,137 +203,242 @@ LOGO
 ========================================================= */
 
 .logo {
-    flex-shrink: 0;
+
+flex-shrink: 0;
+
 }
 
 .logo a {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--pink-primary);
-    text-decoration: none;
-    white-space: nowrap;
+
+font-family:
+    'Dancing Script',
+    cursive;
+
+font-size: 2rem;
+
+font-weight: 700;
+
+color:
+    var(--pink-primary);
+
+text-decoration: none;
+
+white-space: nowrap;
+
 }
 
 /* =========================================================
-NAVIGATION
+NAVIGATION — WADAH / KAPSUL
 ========================================================= */
 
 .navbar {
-    flex: 1;
-    min-width: 0;
+
+flex: 1;
+
+min-width: 0;
+
 }
 
 .nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-    list-style: none;
-    width: 100%;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 8px;
+
+list-style: none;
+
+width: 100%;
+
 }
 
 .nav-item {
-    list-style: none;
+
+list-style: none;
+
 }
 
 .nav-link {
-    display: block;
-    text-decoration: none;
-    color: #666;
-    font-weight: 600;
-    font-size: 0.85rem;
-    padding: 8px 14px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 117, 160, 0.25);
-    transition: all 0.3s ease;
-    white-space: nowrap;
+
+display: block;
+
+text-decoration: none;
+
+color: #666;
+
+font-weight: 600;
+
+font-size: 0.85rem;
+
+padding: 8px 14px;
+
+border-radius: 50px;
+
+background:
+    rgba(255, 255, 255, 0.75);
+
+border:
+    1px solid rgba(255, 117, 160, 0.25);
+
+transition:
+    all 0.3s ease;
+
+white-space: nowrap;
+
 }
+
+/* HOVER */
 
 .nav-link:hover {
-    color: white;
-    background: linear-gradient(
+
+color: white;
+
+background:
+    linear-gradient(
         45deg,
         var(--pink-primary),
         var(--pink-secondary)
     );
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 77, 141, 0.25);
+
+transform: translateY(-2px);
+
+box-shadow:
+    0 5px 15px rgba(255, 77, 141, 0.25);
+
 }
 
+/* MENU AKTIF */
+
 .nav-link.active {
-    color: white;
-    background: linear-gradient(
+
+color: white;
+
+background:
+    linear-gradient(
         45deg,
         var(--pink-primary),
         var(--pink-secondary)
     );
-    box-shadow: 0 5px 15px rgba(255, 77, 141, 0.25);
+
+box-shadow:
+    0 5px 15px rgba(255, 77, 141, 0.25);
+
 }
 
 /* =========================================================
-MUSIC
+HEADER MUSIC
 ========================================================= */
 
 .header-actions {
-    flex-shrink: 0;
+
+flex-shrink: 0;
+
 }
 
 .btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(
+
+display: inline-block;
+
+padding: 12px 28px;
+
+border-radius: 50px;
+
+text-decoration: none;
+
+font-weight: 600;
+
+border: none;
+
+cursor: pointer;
+
+transition:
+    all 0.4s
+    cubic-bezier(
         0.175,
         0.885,
         0.32,
         1.275
     );
+
 }
 
 .btn-music {
-    background: #ffe6ee;
-    color: var(--pink-primary);
-    font-size: 0.85rem;
-    padding: 9px 16px;
-    animation: pulseGlow 3s infinite;
-    white-space: nowrap;
+
+background:
+    #ffe6ee;
+
+color:
+    var(--pink-primary);
+
+font-size: 0.85rem;
+
+padding:
+    9px 16px;
+
+animation:
+    pulseGlow 3s infinite;
+
+white-space: nowrap;
+
 }
 
 /* =========================================================
-BUTTON
+BUTTONS
 ========================================================= */
 
 .btn-primary {
-    background: linear-gradient(
+
+background:
+    linear-gradient(
         45deg,
         var(--pink-primary),
         var(--pink-secondary)
     );
-    color: white;
-    box-shadow: var(--shadow-soft);
+
+color: white;
+
+box-shadow:
+    var(--shadow-soft);
+
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px) scale(1.05);
-    box-shadow: var(--shadow-glow);
+
+transform:
+    translateY(-4px)
+    scale(1.05);
+
+box-shadow:
+    var(--shadow-glow);
+
 }
 
 .btn-secondary {
-    background: white;
-    color: var(--pink-primary);
-    border: 2px solid var(--pink-secondary);
+
+background: white;
+
+color:
+    var(--pink-primary);
+
+border:
+    2px solid
+    var(--pink-secondary);
+
 }
 
 .btn-secondary:hover {
-    background: var(--pink-light);
-    transform: translateY(-4px);
+
+background:
+    var(--pink-light);
+
+transform:
+    translateY(-4px);
+
 }
 
 /* =========================================================
@@ -295,78 +446,162 @@ HERO
 ========================================================= */
 
 .hero-section {
-    padding: 170px 0 90px;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+
+padding:
+    170px 0 90px;
+
+min-height: 80vh;
+
+display: flex;
+
+align-items: center;
+
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
-    align-items: center;
+
+display: grid;
+
+grid-template-columns:
+    1.2fr 0.8fr;
+
+gap: 40px;
+
+align-items: center;
+
 }
 
 .birthday-badge {
-    background: white;
-    color: var(--pink-primary);
-    padding: 6px 18px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    box-shadow: var(--shadow-soft);
-    display: inline-block;
-    margin-bottom: 15px;
-    animation: fadeInUp 1s ease;
+
+background: white;
+
+color:
+    var(--pink-primary);
+
+padding:
+    6px 18px;
+
+border-radius:
+    20px;
+
+font-size:
+    0.85rem;
+
+font-weight:
+    600;
+
+box-shadow:
+    var(--shadow-soft);
+
+display:
+    inline-block;
+
+margin-bottom:
+    15px;
+
+animation:
+    fadeInUp 1s ease;
+
 }
 
 .hero-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.2rem;
-    color: #800f2f;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    animation: fadeInUp 1.2s ease;
+
+font-family:
+    'Dancing Script',
+    cursive;
+
+font-size:
+    3.2rem;
+
+color:
+    #800f2f;
+
+line-height:
+    1.2;
+
+margin-bottom:
+    20px;
+
+animation:
+    fadeInUp 1.2s ease;
+
 }
 
 .hero-subtitle {
-    font-style: italic;
-    color: #555;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    animation: fadeInUp 1.4s ease;
+
+font-style:
+    italic;
+
+color:
+    #555;
+
+font-size:
+    1.1rem;
+
+margin-bottom:
+    30px;
+
+animation:
+    fadeInUp 1.4s ease;
+
 }
 
 .hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    animation: fadeInUp 1.6s ease;
+
+display:
+    flex;
+
+flex-wrap:
+    wrap;
+
+gap:
+    15px;
+
+animation:
+    fadeInUp 1.6s ease;
+
 }
 
 .hero-image-frame {
-    position: relative;
-    text-align: center;
-    animation: float 5s ease-in-out infinite;
+
+position:
+    relative;
+
+text-align:
+    center;
+
+animation:
+    float 5s ease-in-out infinite;
+
 }
 
-/* =========================================================
-FOTO UTAMA
-TIDAK DIUBAH
-========================================================= */
-
 .profile-img {
-    width: 100%;
-    max-width: 380px;
-    border-radius: 30px;
-    border: 8px solid white;
-    box-shadow: var(--shadow-soft);
-    transition: transform 0.5s ease;
+
+width:
+    100%;
+
+max-width:
+    380px;
+
+border-radius:
+    30px;
+
+border:
+    8px solid white;
+
+box-shadow:
+    var(--shadow-soft);
+
+transition:
+    transform 0.5s ease;
+
 }
 
 .profile-img:hover {
-    transform: scale(1.03);
+
+transform:
+    scale(1.03);
+
 }
 
 /* =========================================================
@@ -374,19 +609,37 @@ SECTION TITLE
 ========================================================= */
 
 .section-title {
-    text-align: center;
-    margin-bottom: 50px;
+
+text-align:
+    center;
+
+margin-bottom:
+    50px;
+
 }
 
 .section-title h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.8rem;
-    color: var(--pink-primary);
+
+font-family:
+    'Dancing Script',
+    cursive;
+
+font-size:
+    2.8rem;
+
+color:
+    var(--pink-primary);
+
 }
 
 .section-title p {
-    color: #777;
-    font-size: 0.95rem;
+
+color:
+    #777;
+
+font-size:
+    0.95rem;
+
 }
 
 /* =========================================================
@@ -394,399 +647,334 @@ POETRY
 ========================================================= */
 
 .poetry-section {
-    padding: 80px 0;
+
+padding:
+    80px 0;
+
 }
 
 .poetry-grid {
-    display: grid;
-    grid-template-columns: repeat(
+
+display:
+    grid;
+
+grid-template-columns:
+    repeat(
         auto-fit,
         minmax(280px, 1fr)
     );
-    gap: 30px;
+
+gap:
+    30px;
+
 }
 
 .poetry-card {
-    background: var(--gradient-card);
-    padding: 35px 25px;
-    border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-    transition: all 0.4s ease;
+
+background:
+    var(--gradient-card);
+
+padding:
+    35px 25px;
+
+border-radius:
+    24px;
+
+border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+box-shadow:
+    var(--shadow-soft);
+
+text-align:
+    center;
+
+transition:
+    all 0.4s ease;
+
 }
 
 .poetry-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-glow);
-    background: white;
+
+transform:
+    translateY(-10px);
+
+box-shadow:
+    var(--shadow-glow);
+
+background:
+    white;
+
 }
 
 .card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    display: inline-block;
-    animation: heartBeat 2.5s infinite;
+
+font-size:
+    2.5rem;
+
+margin-bottom:
+    15px;
+
+display:
+    inline-block;
+
+animation:
+    heartBeat 2.5s infinite;
+
 }
 
 .poetry-card h3 {
-    color: var(--pink-primary);
-    margin-bottom: 15px;
+
+color:
+    var(--pink-primary);
+
+margin-bottom:
+    15px;
+
 }
 
 .poem-text {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.8;
+
+font-size:
+    0.95rem;
+
+color:
+    #666;
+
+line-height:
+    1.8;
+
 }
 
-
 /* =========================================================
-GALERI 10 FOTO
-HANYA BAGIAN INI YANG MENGATUR 10 FOTO
+GALLERY — 10 FOTO PORTRAIT / BERDIRI
 ========================================================= */
 
 .gallery-section {
-    padding: 80px 0;
+
+padding:
+    80px 0;
+
 }
 
 .gallery-grid {
-    display: grid;
 
-    /* DESKTOP: 4 FOTO PER BARIS */
-    grid-template-columns: repeat(4, 1fr);
+display:
+    grid;
 
-    gap: 18px;
+grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
-    width: 100%;
-    max-width: 950px;
+gap:
+    25px;
 
-    margin: 0 auto;
+max-width:
+    750px;
+
+margin:
+    0 auto;
+
 }
 
 .gallery-item {
-    position: relative;
 
-    width: 100%;
+position:
+    relative;
 
-    /* Ukuran foto */
-    aspect-ratio: 3 / 4;
+width:
+    100%;
 
-    border-radius: 16px;
+aspect-ratio:
+    3 / 4;
 
-    overflow: hidden;
+border-radius:
+    20px;
 
-    background: #fff;
+overflow:
+    hidden;
 
-    box-shadow: var(--shadow-soft);
+background:
+    white;
 
-    cursor: pointer;
+box-shadow:
+    var(--shadow-soft);
+
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
 
-    display: block;
+width:
+    100%;
 
-    object-fit: cover;
+height:
+    100%;
 
-    object-position: center;
+display:
+    block;
 
-    transition:
-        transform 0.5s ease;
+object-fit:
+    cover;
+
+object-position:
+    center;
+
+transition:
+    transform 0.6s ease;
+
 }
 
+.gallery-item:hover img {
+
+transform:
+    scale(1.08);
+
+}
 
 /* =========================================================
-TULISAN DI DALAM FOTO
+GALLERY OVERLAY
 ========================================================= */
 
 .gallery-overlay {
-    position: absolute;
 
-    inset: 0;
+position:
+    absolute;
 
-    background:
-        linear-gradient(
-            to top,
-            rgba(255, 77, 141, 0.9),
-            rgba(255, 77, 141, 0.15),
-            transparent
-        );
+inset:
+    0;
 
-    display: flex;
+background:
+    linear-gradient(
+        to top,
+        rgba(255, 77, 141, 0.9),
+        transparent
+    );
 
-    flex-direction: column;
+display:
+    flex;
 
-    justify-content: flex-end;
+flex-direction:
+    column;
 
-    padding: 16px;
+justify-content:
+    flex-end;
 
-    color: white;
+padding:
+    20px;
 
-    opacity: 0;
+color:
+    white;
 
-    transition:
-        opacity 0.3s ease;
+opacity:
+    0;
+
+transition:
+    opacity 0.4s ease;
+
+}
+
+.gallery-item:hover
+.gallery-overlay {
+
+opacity:
+    1;
+
 }
 
 .gallery-overlay h4 {
-    font-size: 14px;
 
-    margin-bottom: 4px;
+margin-bottom:
+    5px;
+
 }
 
 .gallery-overlay p {
-    font-size: 11px;
 
-    line-height: 1.5;
+font-size:
+    0.8rem;
 
-    margin: 0;
 }
-
 
 /* =========================================================
-HOVER DESKTOP
-========================================================= */
-
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-
-/* =========================================================
-TABLET
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-
-        gap: 12px;
-
-        max-width: 600px;
-    }
-
-    .gallery-item {
-        border-radius: 13px;
-    }
-
-    .gallery-overlay {
-        padding: 10px;
-    }
-
-    .gallery-overlay h4 {
-        font-size: 11px;
-    }
-
-    .gallery-overlay p {
-        font-size: 9px;
-    }
-}
-
-
-/* =========================================================
-HP
-10 FOTO
-4 + 3 + 3
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .gallery-section {
-        padding: 60px 12px;
-    }
-
-    .gallery-section .container {
-        padding: 0;
-    }
-
-    .gallery-grid {
-
-        /*
-        TETAP 4 KOLOM
-
-        FOTO:
-        1  2  3  4
-        5  6  7
-        8  9  10
-        */
-
-        grid-template-columns: repeat(4, 1fr);
-
-        gap: 8px;
-
-        width: 100%;
-
-        max-width: none;
-    }
-
-    .gallery-item {
-
-        aspect-ratio: 3 / 4;
-
-        border-radius: 9px;
-    }
-
-    .gallery-item img {
-
-        width: 100%;
-
-        height: 100%;
-
-        object-fit: cover;
-    }
-
-    /*
-    JANGAN display:none.
-    Tulisan tetap ada ketika foto disentuh.
-    */
-
-    .gallery-overlay {
-
-        display: flex;
-
-        padding: 7px;
-
-        opacity: 0;
-    }
-
-    .gallery-overlay h4 {
-
-        font-size: 8px;
-
-        margin-bottom: 2px;
-    }
-
-    .gallery-overlay p {
-
-        font-size: 6px;
-
-        line-height: 1.25;
-    }
-
-    /*
-    HP tidak punya hover.
-    Jadi ketika foto disentuh,
-    overlay akan muncul.
-    */
-
-    .gallery-item:active .gallery-overlay {
-
-        opacity: 1;
-    }
-
-    .gallery-item:active img {
-
-        transform: scale(1.05);
-    }
-}
-
-
-/* =========================================================
-HP KECIL
-========================================================= */
-
-@media (max-width: 380px) {
-
-    .gallery-grid {
-
-        grid-template-columns:
-            repeat(4, 1fr);
-
-        gap: 6px;
-    }
-
-    .gallery-item {
-
-        aspect-ratio: 3 / 4;
-
-        border-radius: 7px;
-    }
-
-    .gallery-overlay {
-
-        padding: 5px;
-    }
-
-    .gallery-overlay h4 {
-
-        font-size: 7px;
-    }
-
-    .gallery-overlay p {
-
-        font-size: 5px;
-    }
-}
-
-
-/* =========================================================
-DEAR YOU
+LETTER / DEAR YOU
 ========================================================= */
 
 #letter.letter-section {
 
-    padding: 140px 0;
+padding:
+    140px 0;
 
-    background: #fffafb;
+background:
+    #fffafb;
+
 }
 
 #letter .section-heading {
 
-    max-width: 700px;
+max-width:
+    700px;
 
-    margin:
-        0 auto 80px;
+margin:
+    0 auto 80px;
+
 }
 
 #letter .section-number {
 
-    font-size: 8px;
+font-size:
+    8px;
 
-    letter-spacing: 4px;
+letter-spacing:
+    4px;
 
-    color: #c05b7c;
+color:
+    #c05b7c;
 
-    font-weight: 600;
+font-weight:
+    600;
+
 }
 
 #letter .script {
 
-    font-family:
-        "Great Vibes",
-        cursive;
+font-family:
+    "Great Vibes",
+    cursive;
 
-    font-size: 38px;
+font-size:
+    38px;
 
-    color: var(--pink-primary);
+color:
+    var(--pink-primary);
 
-    margin:
-        18px 0 8px;
+margin:
+    18px 0 8px;
+
 }
 
 #letter .section-heading h2 {
 
-    font-family:
-        "DM Serif Display",
-        serif;
+font-family:
+    "DM Serif Display",
+    serif;
 
-    font-size:
-        clamp(40px, 5vw, 65px);
+font-size:
+    clamp(
+        40px,
+        5vw,
+        65px
+    );
 
-    font-weight: 400;
+font-weight:
+    400;
 
-    line-height: 1.1;
+line-height:
+    1.1;
 
-    color: #4a2635;
+color:
+    #4a2635;
+
 }
-
 
 /* =========================================================
 LETTER LAYOUT
@@ -794,88 +982,96 @@ LETTER LAYOUT
 
 #letter .letter-layout {
 
-    display: grid;
+display:
+    grid;
 
-    grid-template-columns:
-        100px 1fr;
+grid-template-columns:
+    100px 1fr;
 
-    max-width:
-        900px;
+max-width:
+    900px;
 
-    margin:
-        auto;
+margin:
+    auto;
+
 }
 
 #letter .letter-side {
 
-    display: flex;
+display:
+    flex;
 
-    justify-content:
-        center;
+justify-content:
+    center;
 
-    border-right:
-        1px solid #f0cbd7;
+border-right:
+    1px solid
+    #f0cbd7;
+
 }
 
 #letter .vertical-text {
 
-    writing-mode:
-        vertical-rl;
+writing-mode:
+    vertical-rl;
 
-    transform:
-        rotate(180deg);
+transform:
+    rotate(180deg);
 
-    font-size:
-        8px;
+font-size:
+    8px;
 
-    letter-spacing:
-        4px;
+letter-spacing:
+    4px;
 
-    color:
-        #bd7892;
+color:
+    #bd7892;
+
 }
 
 #letter .letter {
 
-    max-width:
-        680px;
+max-width:
+    680px;
 
-    padding-left:
-        70px;
+padding-left:
+    70px;
+
 }
 
 #letter .letter p {
 
-    font-family:
-        "DM Serif Display",
-        serif;
+font-family:
+    "DM Serif Display",
+    serif;
 
-    font-size:
-        17px;
+font-size:
+    17px;
 
-    line-height:
-        2;
+line-height:
+    2;
 
-    color:
-        #674452;
+color:
+    #674452;
 
-    margin-bottom:
-        25px;
+margin-bottom:
+    25px;
+
 }
 
 #letter .letter .letter-intro {
 
-    font-family:
-        "Great Vibes",
-        cursive !important;
+font-family:
+    "Great Vibes",
+    cursive !important;
 
-    color:
-        var(--pink-primary) !important;
+color:
+    var(--pink-primary) !important;
 
-    font-size:
-        32px !important;
+font-size:
+    32px !important;
+
 }
-
 
 /* =========================================================
 SIGNATURE
@@ -883,35 +1079,36 @@ SIGNATURE
 
 #letter .letter-signature {
 
-    margin-top:
-        60px;
+margin-top:
+    60px;
 
-    display:
-        flex;
+display:
+    flex;
 
-    flex-direction:
-        column;
+flex-direction:
+    column;
 
-    font-family:
-        "Great Vibes",
-        cursive;
+font-family:
+    "Great Vibes",
+    cursive;
 
-    font-size:
-        25px;
+font-size:
+    25px;
 
-    color:
-        var(--pink-primary);
+color:
+    var(--pink-primary);
+
 }
 
 #letter .letter-signature strong {
 
-    font-size:
-        35px;
+font-size:
+    35px;
 
-    font-weight:
-        400;
+font-weight:
+    400;
+
 }
-
 
 /* =========================================================
 SURAT RAHASIA
@@ -919,107 +1116,113 @@ SURAT RAHASIA
 
 #surat.letter-section {
 
-    padding:
-        90px 0;
+padding:
+    90px 0;
+
 }
 
 .letter-wrapper {
 
-    background:
-        #ffffff;
+background:
+    #ffffff;
 
-    padding:
-        50px;
+padding:
+    50px;
 
-    border-radius:
-        30px;
+border-radius:
+    30px;
 
-    box-shadow:
-        var(--shadow-soft);
+box-shadow:
+    var(--shadow-soft);
 
-    max-width:
-        750px;
+max-width:
+    750px;
 
-    margin:
-        0 auto;
+margin:
+    0 auto;
 
-    position:
-        relative;
+position:
+    relative;
 
-    border:
-        2px dashed
-        var(--pink-soft);
+border:
+    2px dashed
+    var(--pink-soft);
+
 }
 
 .letter-header {
 
-    text-align:
-        center;
+text-align:
+    center;
 
-    border-bottom:
-        1px solid
-        var(--pink-light);
+border-bottom:
+    1px solid
+    var(--pink-light);
 
-    padding-bottom:
-        20px;
+padding-bottom:
+    20px;
 
-    margin-bottom:
-        30px;
+margin-bottom:
+    30px;
+
 }
 
 .letter-header h2 {
 
-    font-family:
-        'Dancing Script',
-        cursive;
+font-family:
+    'Dancing Script',
+    cursive;
 
-    font-size:
-        2.5rem;
+font-size:
+    2.5rem;
 
-    color:
-        var(--pink-primary);
+color:
+    var(--pink-primary);
+
 }
 
 .letter-date {
 
-    font-size:
-        0.85rem;
+font-size:
+    0.85rem;
 
-    color:
-        #888;
+color:
+    #888;
+
 }
 
 .letter-body p {
 
-    margin-bottom:
-        20px;
+margin-bottom:
+    20px;
 
-    color:
-        #555;
+color:
+    #555;
 
-    font-size:
-        1.05rem;
+font-size:
+    1.05rem;
+
 }
 
 .letter-closing {
 
-    text-align:
-        right;
+text-align:
+    right;
 
-    margin-top:
-        40px;
+margin-top:
+    40px;
 
-    font-family:
-        'Dancing Script',
-        cursive;
+font-family:
+    'Dancing Script',
+    cursive;
 
-    font-size:
-        1.4rem;
+font-size:
+    1.4rem;
 
-    color:
-        var(--pink-primary);
+color:
+    var(--pink-primary);
+
 }
-
 
 /* =========================================================
 FOOTER
@@ -1027,284 +1230,467 @@ FOOTER
 
 .main-footer {
 
-    background:
-        rgba(255, 255, 255, 0.9);
+background:
+    rgba(255, 255, 255, 0.9);
 
-    padding:
-        40px 0;
+padding:
+    40px 0;
 
-    text-align:
-        center;
+text-align:
+    center;
 
-    box-shadow:
-        0 -5px 20px
-        rgba(255, 182, 193, 0.2);
+box-shadow:
+    0 -5px 20px
+    rgba(255, 182, 193, 0.2);
+
 }
 
 .footer-quote {
 
-    font-style:
-        italic;
+font-style:
+    italic;
 
-    color:
-        var(--pink-primary);
+color:
+    var(--pink-primary);
 
-    font-size:
-        1.1rem;
+font-size:
+    1.1rem;
 
-    margin-bottom:
-        10px;
+margin-bottom:
+    10px;
+
 }
 
 .footer-heart {
 
-    font-size:
-        1.5rem;
+font-size:
+    1.5rem;
 
-    margin:
-        10px 0;
+margin:
+    10px 0;
 
-    animation:
-        heartBeat 1.5s infinite;
+animation:
+    heartBeat 1.5s infinite;
+
 }
 
 .copyright {
 
-    font-size:
-        0.85rem;
+font-size:
+    0.85rem;
 
-    color:
-        #888;
+color:
+    #888;
+
 }
 
-
 /* =========================================================
-TABLET / 900px
+TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    .header-container {
+.header-container {
 
-        justify-content:
-            center;
-    }
+    justify-content:
+        center;
 
-    .logo {
-
-        width:
-            100%;
-
-        text-align:
-            center;
-    }
-
-    .navbar {
-
-        width:
-            100%;
-
-        flex:
-            none;
-    }
-
-    .header-actions {
-
-        width:
-            100%;
-
-        text-align:
-            center;
-    }
-
-    .hero-container {
-
-        grid-template-columns:
-            1fr;
-
-        text-align:
-            center;
-    }
-
-    .hero-buttons {
-
-        justify-content:
-            center;
-    }
-
-    .hero-image-frame {
-
-        margin-top:
-            20px;
-    }
 }
 
 
+.logo {
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+}
+
+
+.navbar {
+
+    width:
+        100%;
+
+    flex:
+        none;
+
+}
+
+
+.header-actions {
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+}
+
+
+.hero-container {
+
+    grid-template-columns:
+        1fr;
+
+    text-align:
+        center;
+
+}
+
+
+.hero-buttons {
+
+    justify-content:
+        center;
+
+}
+
+
+.hero-image-frame {
+
+    margin-top:
+        20px;
+
+}
+
+}
+
 /* =========================================================
-HP 600px
+HP
 ========================================================= */
 
 @media (max-width: 600px) {
 
-    .container {
+.container {
 
-        padding-left:
-            15px;
+    padding-left:
+        15px;
 
-        padding-right:
-            15px;
-    }
+    padding-right:
+        15px;
 
-
-    /* HEADER */
-
-    .main-header {
-
-        padding:
-            10px 0;
-    }
-
-    .logo a {
-
-        font-size:
-            1.7rem;
-    }
-
-    .nav-list {
-
-        display:
-            flex;
-
-        flex-wrap:
-            wrap;
-
-        justify-content:
-            center;
-
-        gap:
-            6px;
-
-        width:
-            100%;
-    }
-
-    .nav-item {
-
-        flex:
-            0 0 auto;
-    }
-
-    .nav-link {
-
-        font-size:
-            0.72rem;
-
-        padding:
-            7px 10px;
-    }
-
-    .btn-music {
-
-        font-size:
-            0.78rem;
-
-        padding:
-            8px 14px;
-    }
+}
 
 
-    /* HERO */
+/* HEADER */
 
-    .hero-section {
+.main-header {
 
-        padding:
-            230px 0 70px;
-    }
+    padding:
+        10px 0;
 
-    .hero-title {
-
-        font-size:
-            2.4rem;
-    }
-
-    .hero-subtitle {
-
-        font-size:
-            0.95rem;
-    }
-
-    .hero-buttons {
-
-        flex-direction:
-            column;
-
-        align-items:
-            center;
-    }
-
-    .hero-buttons .btn {
-
-        width:
-            100%;
-
-        max-width:
-            280px;
-
-        text-align:
-            center;
-    }
+}
 
 
-    /* SECTION */
+.logo a {
 
-    .section-title h2 {
+    font-size:
+        1.7rem;
 
-        font-size:
-            2.2rem;
-    }
+}
 
 
-    /* DEAR YOU */
+/*
+   INI YANG MEMBUAT MENU TIDAK
+   BERGERAK KE KANAN.
+   MENU AKAN TURUN KE BARIS BARU.
+*/
 
-    #letter.letter-section {
+.nav-list {
 
-        padding:
-            90px 0;
-    }
+    display:
+        flex;
 
-    #letter .section-heading {
+    flex-wrap:
+        wrap;
 
-        margin-bottom:
-            50px;
-    }
+    justify-content:
+        center;
 
-    #letter .section-heading h2 {
+    gap:
+        6px;
 
-        font-size:
-            42px;
-    }
+    width:
+        100%;
 
-    #letter .script {
+}
 
-        font-size:
-            32px;
-    }
 
-    #letter .letter-layout {
+.nav-item {
 
-        grid-template-columns:
-            45px 1fr;
-    }
+    flex:
+        0 0 auto;
 
-    #letter .letter {
+}
 
-        padding-left:
-            20px;
-    }
 
-    #letter .letter p {
+.nav-link {
 
-        font-size:
-            15px;
+    font-size:
+        0.72rem;
 
-        line-height:
+    padding:
+        7px 10px;
+
+}
+
+
+.btn-music {
+
+    font-size:
+        0.78rem;
+
+    padding:
+        8px 14px;
+
+}
+
+
+/* HERO */
+
+.hero-section {
+
+    padding:
+        230px 0 70px;
+
+}
+
+
+.hero-title {
+
+    font-size:
+        2.4rem;
+
+}
+
+
+.hero-subtitle {
+
+    font-size:
+        0.95rem;
+
+}
+
+
+.hero-buttons {
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+}
+
+
+.hero-buttons .btn {
+
+    width:
+        100%;
+
+    max-width:
+        280px;
+
+    text-align:
+        center;
+
+}
+
+
+/* SECTION */
+
+.section-title h2 {
+
+    font-size:
+        2.2rem;
+
+}
+
+
+/* GALLERY */
+
+.gallery-grid {
+
+    grid-template-columns:
+        1fr;
+
+    max-width:
+        360px;
+
+    gap:
+        20px;
+
+}
+
+
+.gallery-item {
+
+    aspect-ratio:
+        3 / 4;
+
+}
+
+
+/* DEAR YOU */
+
+#letter.letter-section {
+
+    padding:
+        90px 0;
+
+}
+
+
+#letter .section-heading {
+
+    margin-bottom:
+        50px;
+
+}
+
+
+#letter .section-heading h2 {
+
+    font-size:
+        42px;
+
+}
+
+
+#letter .script {
+
+    font-size:
+        32px;
+
+}
+
+
+#letter .letter-layout {
+
+    grid-template-columns:
+        45px 1fr;
+
+}
+
+
+#letter .letter {
+
+    padding-left:
+        20px;
+
+}
+
+
+#letter .letter p {
+
+    font-size:
+        15px;
+
+    line-height:
+        1.9;
+
+}
+
+
+#letter .vertical-text {
+
+    font-size:
+        6px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+/* SURAT */
+
+.letter-wrapper {
+
+    padding:
+        25px 20px;
+
+    border-radius:
+        22px;
+
+}
+
+
+.letter-header h2 {
+
+    font-size:
+        2rem;
+
+}
+
+
+.letter-body p {
+
+    font-size:
+        0.95rem;
+
+}
+
+
+.letter-closing {
+
+    font-size:
+        1.2rem;
+
+}
+
+}
+
+/* =========================================================
+HP KECIL
+========================================================= */
+
+@media (max-width: 380px) {
+
+.nav-link {
+
+    font-size:
+        0.68rem;
+
+    padding:
+        6px 8px;
+
+}
+
+
+.hero-section {
+
+    padding-top:
+        225px;
+
+}
+
+
+.hero-title {
+
+    font-size:
+        2.1rem;
+
+}
+
+
+#letter .letter-layout {
+
+    grid-template-columns:
+        35px 1fr;
+
+}
+
+
+#letter .letter {
+
+    padding-left:
+        15px;
+
+}
+
+}
