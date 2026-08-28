@@ -747,154 +747,138 @@ line-height:
 
 }
 
-/* =========================================================
-GALLERY — 10 FOTO PORTRAIT / BERDIRI
-========================================================= */
+/* ==========================================================================
+9. GALLERY — 10 FOTO | TAMPILAN 4-3-3 DI HP
+========================================================================== */
 
 .gallery-section {
-
-padding:
-    80px 0;
-
+    padding: 80px 0;
 }
 
 .gallery-grid {
-
-display:
-    grid;
-
-grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-gap:
-    25px;
-
-max-width:
-    750px;
-
-margin:
-    0 auto;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
 }
 
 .gallery-item {
-
-position:
-    relative;
-
-width:
-    100%;
-
-aspect-ratio:
-    3 / 4;
-
-border-radius:
-    20px;
-
-overflow:
-    hidden;
-
-background:
-    white;
-
-box-shadow:
-    var(--shadow-soft);
-
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: var(--shadow-soft);
 }
 
 .gallery-item img {
-
-width:
-    100%;
-
-height:
-    100%;
-
-display:
-    block;
-
-object-fit:
-    cover;
-
-object-position:
-    center;
-
-transition:
-    transform 0.6s ease;
-
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
 }
-
-.gallery-item:hover img {
-
-transform:
-    scale(1.08);
-
-}
-
-/* =========================================================
-GALLERY OVERLAY
-========================================================= */
 
 .gallery-overlay {
+    position: absolute;
+    inset: 0;
 
-position:
-    absolute;
-
-inset:
-    0;
-
-background:
-    linear-gradient(
+    background: linear-gradient(
         to top,
-        rgba(255, 77, 141, 0.9),
+        rgba(255, 77, 141, 0.85),
         transparent
     );
 
-display:
-    flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-flex-direction:
-    column;
+    padding: 12px;
+    color: white;
 
-justify-content:
-    flex-end;
-
-padding:
-    20px;
-
-color:
-    white;
-
-opacity:
-    0;
-
-transition:
-    opacity 0.4s ease;
-
-}
-
-.gallery-item:hover
-.gallery-overlay {
-
-opacity:
-    1;
-
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .gallery-overlay h4 {
-
-margin-bottom:
-    5px;
-
+    font-size: 13px;
+    margin-bottom: 3px;
 }
 
 .gallery-overlay p {
+    font-size: 10px;
+    line-height: 1.4;
+}
 
-font-size:
-    0.8rem;
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+
+/* ==========================================================================
+TAMPILAN TABLET
+========================================================================== */
+
+@media (max-width: 768px) {
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        max-width: 600px;
+    }
+
+    .gallery-item {
+        border-radius: 13px;
+    }
 
 }
 
+
+/* ==========================================================================
+TAMPILAN HP — 4 FOTO BARIS 1, 3 FOTO BARIS 2, 3 FOTO BARIS 3
+========================================================================== */
+
+@media (max-width: 480px) {
+
+    .gallery-section {
+        padding: 60px 12px;
+    }
+
+    .gallery-section .container {
+        padding: 0;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        width: 100%;
+    }
+
+    .gallery-item {
+        aspect-ratio: 3 / 4;
+        border-radius: 10px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-overlay {
+        display: none;
+    }
+
+}
 /* =========================================================
 LETTER / DEAR YOU
 ========================================================= */
